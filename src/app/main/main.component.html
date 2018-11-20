@@ -1,0 +1,17 @@
+<div class="main-container">
+  <form class="container" [formGroup]="loginForm" (submit)="submit()">
+    <mat-form-field>
+        <input matInput type="text" formControlName="userName" placeholder="User"/>
+        <mat-error>
+            <span *ngIf="loginForm?.controls.userName?.errors?.required">Usuario requerido</span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" formControlName="password" placeholder="Password"/>
+        <mat-error>
+            <span *ngIf="loginForm?.controls.password?.errors?.required">Password requerido</span>
+        </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!loginForm.valid" type="submit">Login</button>
+  </form>
+</div>

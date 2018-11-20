@@ -1,0 +1,26 @@
+<mat-sidenav-container>
+  <mat-toolbar class="toolbar-text" color="primary" *ngIf="isLogged">
+      <mat-icon class="hand-cursor" (click)="sidenav.open()">reorder</mat-icon>
+      <div class="toolbar-container">
+          Angular5+ Base Material
+          <div class="toolbar-menu-items">
+              <span><a [routerLink]="['']" class="toolbar-item">Inicio</a></span>
+              <span><a [routerLink]="['about']" class="toolbar-item">Nosotros</a></span>
+              <span><a [routerLink]="['contact']" class="toolbar-item">Contacto</a></span>
+              <span><a class="toolbar-item" (click)="logout()">Logout</a></span>
+          </div>
+      </div>
+  </mat-toolbar>
+  <mat-sidenav #sidenav>
+      <mat-toolbar class="toolbar-text" color="primary">
+          Menu
+      </mat-toolbar>
+      <mat-list>
+          <mat-list-item><a [routerLink]="['']" class="toolbar-list-item">Inicio</a></mat-list-item>
+          <mat-list-item><a [routerLink]="['about']" class="toolbar-list-item">Nosotros</a></mat-list-item>
+          <mat-list-item><a [routerLink]="['contact']" class="toolbar-list-item">Contacto</a></mat-list-item>
+      </mat-list>
+  </mat-sidenav>
+  <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

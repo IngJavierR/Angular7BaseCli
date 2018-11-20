@@ -1,0 +1,53 @@
+mat-sidenav-container {
+    height: 100%;
+}
+a {
+    color: white;
+    text-decoration: none;
+}  
+a:hover {
+    color: #5aadbb;
+}
+mat-sidenav {
+    width: 200px;
+}
+.toolbar-container {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.toolbar-menu-items {
+    display: flex;
+    flex-direction: row;
+}
+.toolbar-item {
+    margin: 5px 10px;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+.toolbar-item:hover {
+    color: #ffc42a;
+    border-bottom: 1px inherit solid; 
+}
+.toolbar-logo {
+    height: 100%;
+    width: auto;
+}
+.toolbar-text {
+    font-size: 1.2em;
+}
+.toolbar-list-item {
+    margin: 5px 10px;
+    font-weight: normal;
+    font-size: 0.8em;
+    color: blue;
+}
+.toolbar-list-item:hover {
+    color: #ffc42a;
+    border-bottom: 1px inherit solid; 
+}
+.hand-cursor {
+    cursor: pointer;
+}

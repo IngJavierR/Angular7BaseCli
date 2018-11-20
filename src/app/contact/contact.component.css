@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.container > * {
+    margin: 0 auto;
+    width: 20%;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+}

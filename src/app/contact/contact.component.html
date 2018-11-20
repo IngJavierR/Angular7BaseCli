@@ -1,0 +1,10 @@
+<div class="main-container">
+  <h1>Contact</h1>
+  <form class="container" [formGroup]="profileForm" (submit)="submit()">
+      <app-formulario *ngFor="let formInfo of formInfoGroups['controls']; let i=index" [form-info]="formInfo" [form-group]="profileForm"></app-formulario>
+    <div class="btnContainer">
+      <button mat-raised-button color="primary" type="button" (click)="agregar()">Agregar</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid">Submit</button>
+    </div>
+  </form>
+</div>

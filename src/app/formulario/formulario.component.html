@@ -1,0 +1,34 @@
+<div [formGroup]="formInfo">
+  <mat-form-field>
+    <input matInput type="text" formControlName="firstName" placeholder="firstName"/>
+    <mat-error>
+        <span *ngIf="formInfo?.controls['firstName'].errors?.required">Nombre requerido</span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" formControlName="lastName" placeholder="lastName"/>
+    <mat-error>
+        <span *ngIf="formInfo?.controls['lastName'].errors?.required">Apellido requerido</span>
+    </mat-error>
+  </mat-form-field>
+
+  <div formGroupName="address">
+    <mat-form-field>
+      <input matInput type="text" formControlName="street" placeholder="street"/>
+      <mat-error>
+          <span *ngIf="formInfo?.controls['address'].controls.street?.errors?.required">Calle Requerida</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select formControlName="city">
+        <mat-option>None</mat-option>
+        <mat-option *ngFor="let city of cities" [value]="city.id">{{city.name}}</mat-option>
+      </mat-select>
+      <mat-error>
+          <span *ngIf="formInfo?.controls['address'].controls.city?.errors?.required">Calle Requerida</span>
+      </mat-error>
+    </mat-form-field>
+  </div>
+</div>
