@@ -14,19 +14,19 @@ export class DataService {
   public isLoggedEvent = new Subject<boolean>();
 
   getGeneralNotificationMessage() {
-      return this.generalNotificationMessage.asObservable();
+    return this.generalNotificationMessage.asObservable();
   }
 
-  setGeneralNotificationMessage(msg: string){
-      this.generalNotificationMessage.next(msg);
+  setGeneralNotificationMessage(msg: string) {
+    this.generalNotificationMessage.next(msg);
   }
 
-  getIsLoadingEvent(){
-      return this.isLoading.asObservable();
+  getIsLoadingEvent() {
+    return this.isLoading.asObservable();
   }
 
-  setIsLoadingEvent(isLoading: boolean){
-      this.isLoading.next(isLoading);
+  setIsLoadingEvent(isLoading: boolean) {
+    this.isLoading.next(isLoading);
   }
 
   getIsLogged() {
@@ -34,7 +34,7 @@ export class DataService {
   }
 
   setIsLogged(isLogged: boolean) {
-      this.isLogged = isLogged;
-      this.isLoggedEvent.next(isLogged);
+    this.isLogged = isLogged;
+    this.isLoggedEvent.next(isLogged);
   }
 }

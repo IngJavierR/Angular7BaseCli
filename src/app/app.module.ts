@@ -6,15 +6,17 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatToolbarModule,
-        MatSidenavModule,
-        MatButtonModule,
-        MatListModule,
-        MatIconModule,
-        MatInputModule,
-        MatProgressBarModule,
-        MatSnackBarModule,
-        MatSelectModule } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatSidenavModule,
+  MatButtonModule,
+  MatListModule,
+  MatIconModule,
+  MatInputModule,
+  MatProgressBarModule,
+  MatSnackBarModule,
+  MatSelectModule
+} from '@angular/material';
 
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
@@ -31,7 +33,7 @@ export const MATERIAL_COMPONENTS = [
   MatProgressBarModule,
   MatSnackBarModule,
   MatSelectModule
-]
+];
 
 @NgModule({
   declarations: [

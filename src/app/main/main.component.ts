@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from "@angular/forms";
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../services/data.service';
 
@@ -9,10 +9,10 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  
-  constructor(private fb: FormBuilder, 
-              private router: Router, 
-              private _dataService: DataService) { }
+
+  constructor(private fb: FormBuilder,
+    private router: Router,
+    private _dataService: DataService) { }
   loginForm = this.fb.group({
     userName: ['admin', Validators.required],
     password: ['admin', Validators.required]
@@ -22,7 +22,7 @@ export class MainComponent implements OnInit {
   }
 
   submit() {
-    if(this.loginForm.value.userName === 'admin' && this.loginForm.value.userName === 'admin'){
+    if (this.loginForm.value.userName === 'admin' && this.loginForm.value.userName === 'admin') {
       this._dataService.setIsLogged(true);
       this.router.navigate(['about']);
     }

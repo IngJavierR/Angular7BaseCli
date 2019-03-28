@@ -7,12 +7,12 @@ import { FormBuilder, Validators, FormArray } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
   formInfo: FormArray;
+
   constructor(private fb: FormBuilder) { }
-  
+
   profileForm = this.fb.group({
-    formInfoGroups : this.fb.array([])
+    formInfoGroups: this.fb.array([])
   });
 
   get formInfoGroups() {
@@ -25,7 +25,7 @@ export class ContactComponent implements OnInit {
 
   submit() {
     this.formInfoGroups.controls.forEach(x => console.log(x.value));
-  } 
+  }
 
   agregar() {
     this.formInfoGroups.push(this.fb.group({

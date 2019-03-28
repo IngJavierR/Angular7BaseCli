@@ -16,21 +16,21 @@ export class AppComponent {
   title = 'app';
   isLoading = false;
   isLogged = false;
-  constructor(private _dataService: DataService, private _snackBar: MatSnackBar, private router: Router){
+  constructor(private _dataService: DataService, private _snackBar: MatSnackBar, private router: Router) {
     this.isLogged = this._dataService.isLogged;
     this._dataService
-        .getIsLoadingEvent()
-        .subscribe(isLoad => this.isLoading = isLoad);
+      .getIsLoadingEvent()
+      .subscribe(isLoad => this.isLoading = isLoad);
     this._dataService
-        .getIsLogged()
-        .subscribe(isLogged => this.isLogged = isLogged);
+      .getIsLogged()
+      .subscribe(isLogged => this.isLogged = isLogged);
     this._dataService
-        .getGeneralNotificationMessage()
-        .subscribe(msg => {
-          this._snackBar.open(msg, 'Ok', {
-            duration: 2000
-          });
+      .getGeneralNotificationMessage()
+      .subscribe(msg => {
+        this._snackBar.open(msg, 'Ok', {
+          duration: 2000
         });
+      });
   }
 
   logout() {
@@ -41,17 +41,17 @@ export class AppComponent {
 }
 
 export const routes: Routes = [
-  { 
-    path: '', 
-    component: MainComponent 
+  {
+    path: '',
+    component: MainComponent
   },
-  { 
-    path: 'about', 
+  {
+    path: 'about',
     component: AboutComponent,
     canActivate: [LoginGuard]
   },
-  { 
-    path: 'contact', 
+  {
+    path: 'contact',
     component: ContactComponent,
     canActivate: [LoginGuard]
   },
