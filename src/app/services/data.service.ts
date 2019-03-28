@@ -37,4 +37,16 @@ export class DataService {
     this.isLogged = isLogged;
     this.isLoggedEvent.next(isLogged);
   }
+
+  setToken(token: string) {
+    sessionStorage.setItem('token', token);
+  }
+
+  removeToken() {
+    sessionStorage.removeItem('token');
+  }
+
+  getToken(): string {
+    return sessionStorage.getItem('token');
+  }
 }

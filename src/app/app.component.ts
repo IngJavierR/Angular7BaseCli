@@ -37,6 +37,7 @@ export class AppComponent {
     console.log('out');
     this.router.navigateByUrl('/');
     this._dataService.setIsLogged(false);
+    this._dataService.removeToken();
   }
 }
 
