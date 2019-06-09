@@ -6,20 +6,23 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatToolbarModule,
-        MatSidenavModule,
-        MatButtonModule,
-        MatListModule,
-        MatIconModule,
-        MatInputModule,
-        MatProgressBarModule,
-        MatSnackBarModule,
-        MatSelectModule } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatSidenavModule,
+  MatButtonModule,
+  MatListModule,
+  MatIconModule,
+  MatInputModule,
+  MatProgressBarModule,
+  MatSnackBarModule,
+  MatSelectModule
+} from '@angular/material';
 
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { APP_PROVIDERS } from './app.providers';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -31,7 +34,7 @@ export const MATERIAL_COMPONENTS = [
   MatProgressBarModule,
   MatSnackBarModule,
   MatSelectModule
-]
+];
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ export const MATERIAL_COMPONENTS = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
+  ],
+  providers: [
+    APP_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })

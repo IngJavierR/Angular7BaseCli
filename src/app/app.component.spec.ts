@@ -1,17 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
 
-import { APP_BASE_HREF } from "@angular/common";
+import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { MatToolbarModule,
-        MatSidenavModule,
-        MatButtonModule,
-        MatListModule,
-        MatIconModule,
-        MatInputModule,
-        MatProgressBarModule } from '@angular/material';
-import { MATERIAL_COMPONENTS } from "./app.module";
+import {
+  MatToolbarModule,
+  MatSidenavModule,
+  MatButtonModule,
+  MatListModule,
+  MatIconModule,
+  MatInputModule,
+  MatProgressBarModule
+} from '@angular/material';
+import { MATERIAL_COMPONENTS } from './app.module';
 import { APP_PROVIDERS } from './app.providers';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
@@ -33,7 +35,7 @@ describe('AppComponent', () => {
         MATERIAL_COMPONENTS,
         RouterModule.forRoot(routes)
       ],
-      providers: [APP_PROVIDERS, {provide: APP_BASE_HREF, useValue: '/'}]
+      providers: [APP_PROVIDERS, { provide: APP_BASE_HREF, useValue: '/' }]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

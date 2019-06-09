@@ -9,12 +9,12 @@ import { FormBuilder, FormArray } from '@angular/forms';
 export class FormularioComponent implements OnInit {
 
   @ViewChild('formContainer') formContainer;
-  @Input('form-info') formInfo: FormArray;
-  @Input('form-group') formGroup;
+  @Input('formInfo') formInfo: FormArray;
+  @Input('formGroup') formGroup;
   cities: any[] = [{
     id: 1,
     name: 'CDMX',
-  },{
+  }, {
     id: 2,
     name: 'EDOMEX',
   }];

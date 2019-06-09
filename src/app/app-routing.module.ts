@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from "./app.component";
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  exports:[ RouterModule ],
+  exports: [RouterModule],
   declarations: []
 })
 
